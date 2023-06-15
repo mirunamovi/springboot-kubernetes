@@ -1,0 +1,9 @@
+server:
+  port: 8001
+
+spring:
+  data:
+    mongodb:
+      host: movileanu
+      port: 27017
+      database: microservices-product

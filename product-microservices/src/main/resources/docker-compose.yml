@@ -1,0 +1,21 @@
+version: "3"
+services:
+  movileanu:
+    image: mongo:latest
+    container_name: "movileanu"
+    ports:
+      - 27017:27017
+
+  product-microservices:
+    image: product-microservices:latest
+    container_name: product-microservices
+    ports:
+      - 8000:8001
+    links:
+      - movileanu
+
+  microservices-login:
+    image: microservices-login:latest
+    container_name: microservices-login
+    ports:
+      - 8002:8001
